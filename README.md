@@ -1,6 +1,8 @@
-Video-rental web(backbone) and backend npm + MongoDB application
-================================================================
+Video-rental 
+============
 
+web(backbone) and backend npm + MongoDB application
+---------------------------------------------------
 
 to install
 ----------
