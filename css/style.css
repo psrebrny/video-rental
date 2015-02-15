@@ -1,0 +1,619 @@
+/*--------------------------*/
+/*       CSS Stylesheet     */
+/* (C) 2015 www.eduweb.pl   */
+/*--------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.outline {
+  position: absolute;
+  clip: rect(0px 0px 0px 0px);
+  *clip: rect 0 0 0 0;
+}
+
+input, textarea, button {
+  outline: none;
+}
+
+mark {
+  background: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.app-heading {
+  padding: 30px;
+  border-bottom: 1px #e2e2e2 solid;
+  font-size: 32px;
+}
+.app-heading .fa {
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+  opacity: 0.3;
+}
+
+.btn {
+  display: inline-block;
+  height: 60px;
+  padding: 0 60px;
+  border-radius: 5px;
+  border: none;
+  background: #ff503f;
+  position: relative;
+  cursor: pointer;
+  font: 18px/60px "Droid Sans", sans-serif;
+  color: white;
+}
+.special.btn {
+  background-color: #9f9f9f;
+  cursor: not-allowed;
+}
+
+.btn-rounded {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px #c8c8c8 solid;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 34px;
+  text-align: center;
+  color: #989898;
+}
+.btn-rounded:hover, .active.btn-rounded {
+  border-color: #ff503f;
+  background-color: #ff503f;
+  color: white;
+}
+
+.app-form {
+  padding: 30px 0;
+}
+
+.app-form-field {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+.app-form-field label {
+  display: inline-block;
+  width: 130px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+.app-form-field label[for="movie-description"], .app-form-field label[for="ms-movie-id"], .app-form-field label[for="ms-client-id"], .app-form-field label[for="ms-movie-categories"], .app-form-field label[for="ms-movie-actors"] {
+  padding-top: 15px;
+  vertical-align: top;
+}
+.app-form-field input[type='text'],
+.app-form-field textarea {
+  width: calc(100% - 155px);
+  height: 45px;
+  padding: 0 20px;
+  border-radius: 5px;
+  border: 1px #e2e2e2 solid;
+  box-shadow: inset -1px 0 4px rgba(0, 0, 0, 0.07);
+  font: 22px "Droid Sans", sans-serif;
+  color: #9b9b9b;
+}
+.app-form-field input[type='text'].medium,
+.app-form-field textarea.medium {
+  width: 350px;
+}
+.app-form-field input[type='text'].short,
+.app-form-field textarea.short {
+  width: 190px;
+}
+.app-form-field input[type='text'].hidden,
+.app-form-field textarea.hidden {
+  display: none;
+}
+.app-form-field input[type='text']#client-id-number,
+.app-form-field textarea#client-id-number {
+  text-transform: uppercase;
+}
+.app-form-field textarea {
+  height: 300px;
+  max-height: 600px;
+  padding-top: 15px;
+  resize: vertical;
+  line-height: 1.5;
+}
+.app-form-field ::-webkit-input-placeholder {
+  color: #cecece;
+}
+.app-form-field :-moz-placeholder {
+  color: #cecece;
+}
+.app-form-field ::-moz-placeholder {
+  color: #cecece;
+}
+.app-form-field :-ms-input-placeholder {
+  color: #cecece;
+}
+
+.app-form-submit {
+  padding: 30px;
+  padding-bottom: 0;
+  border-top: 1px #e2e2e2 solid;
+}
+.app-form-submit .btn {
+  margin-left: 20px;
+  float: right;
+}
+
+.app-form-submit:before, .app-header:before, .app-content-wrapper:before, .app-item-info:before, .app-item-info p:before, .app-actions:before, .app-form-submit:after, .app-header:after, .app-content-wrapper:after, .app-item-info:after, .app-item-info p:after, .app-actions:after {
+  content: " ";
+  display: table;
+}
+.app-form-submit:after, .app-header:after, .app-content-wrapper:after, .app-item-info:after, .app-item-info p:after, .app-actions:after {
+  clear: both;
+}
+.app-form-submit, .app-header, .app-content-wrapper, .app-item-info, .app-item-info p, .app-actions {
+  *zoom: 1;
+}
+
+.app-sort li {
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.btn-rounded, .app-sidebar-nav a, .app-sidebar-nav a:before, .app-sidebar-nav a .fa, .app-items-list li, .app-items-pagination a, .app-item-info p, .app-latest-rents li {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+}
+
+.app-wrapper {
+  width: 100%;
+  min-height: 100%;
+  padding-left: 130px;
+  position: relative;
+}
+
+.app-header {
+  padding: 30px;
+  background-color: #f1f1f1;
+}
+
+.app-breadcrumbs {
+  float: left;
+  font-size: 0;
+  line-height: 0;
+}
+
+.app-status {
+  float: right;
+  font-size: 0;
+  line-height: 0;
+  text-transform: uppercase;
+}
+
+.app-status-item {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  margin-right: 12px;
+  border-radius: 20px;
+  border: 1px #c8c8c8 solid;
+  box-shadow: 0 1px 0 #fff;
+  font-size: 14px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+.app-status-item:last-child {
+  margin-right: 0;
+}
+.app-status-item .fa {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.app-sidebar {
+  width: 130px;
+  min-height: 100%;
+  background: #23282e url(../images/sidebar_bg.png) repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.app-logo {
+  width: 100%;
+  margin: 30px 0;
+}
+.app-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.app-sidebar-sep {
+  font-size: 30px;
+  text-align: center;
+  color: #787878;
+}
+
+.app-sidebar-nav a {
+  display: block;
+  padding: 20px 0 25px 0;
+  margin: 15px 0;
+  position: relative;
+  font-size: 16px;
+  text-align: center;
+  color: #787878;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+.app-sidebar-nav a:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #ff503f;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.app-sidebar-nav a .fa {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.app-sidebar-nav a.active, .app-sidebar-nav a:hover {
+  color: white;
+}
+.app-sidebar-nav a.active:before, .app-sidebar-nav a:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+.app-sidebar-nav a.active .fa, .app-sidebar-nav a:hover .fa {
+  color: #ff503f;
+}
+.app-sidebar-nav a:last-child .fa {
+  font-size: 44px;
+}
+
+.app-main-tabs {
+  display: none;
+  border-top: 1px #d3d7da solid;
+  border-bottom: 1px #d3d7da solid;
+  box-shadow: inset 0 1px 0 #fff;
+  background-color: #f1f1f1;
+  font-size: 0;
+  line-height: 0;
+}
+.app-main-tabs.active {
+  display: block;
+}
+.app-main-tabs a {
+  display: inline-block;
+  min-width: 265px;
+  height: 80px;
+  padding: 0 30px;
+  border-right: 1px #d3d7da solid;
+  box-shadow: inset 0 1px 0 #fff;
+  background-color: #f8f8f8;
+  font-size: 22px;
+  line-height: 82px;
+  color: #4b4b4b;
+}
+.app-main-tabs a .fa {
+  margin-right: 10px;
+  opacity: 0.3;
+  position: relative;
+  top: 4px;
+  font-size: 36px;
+}
+.app-main-tabs a.active {
+  background-color: white;
+  position: relative;
+}
+.app-main-tabs a.active:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.app-content-wrapper {
+  padding: 30px;
+}
+
+.app-content,
+.app-content-sidebar {
+  border-radius: 5px;
+  border: 1px #e2e2e2 solid;
+  box-shadow: -1px 0 4px rgba(0, 0, 0, 0.07);
+}
+
+.app-content {
+  width: calc(70% - 10px);
+  float: left;
+}
+
+.app-content-sidebar {
+  width: calc(30% - 10px);
+  float: right;
+}
+
+.app-items-list li {
+  padding: 30px;
+  border-bottom: 1px #e2e2e2 solid;
+  font-size: 18px;
+}
+.app-items-list li:last-child {
+  border-bottom: none;
+}
+.app-items-list li .client,
+.app-items-list li .date {
+  display: inline-block;
+  margin-left: 20px;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.app-items-list li .client .fa,
+.app-items-list li .date .fa {
+  margin-right: 5px;
+}
+.app-items-list li .details {
+  float: right;
+  position: relative;
+  top: -7px;
+}
+.app-items-list li:hover {
+  background-color: #fbfbfb;
+}
+.app-items-list .counter {
+  display: inline-block;
+  padding: 7px 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  background-color: #ff503f;
+  color: white;
+}
+
+.app-items-pagination {
+  padding: 30px;
+  border-top: 1px #e2e2e2 solid;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+}
+.app-items-pagination a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 0 4px;
+  border-radius: 50%;
+  border: 1px #e2e2e2 solid;
+  font-size: 14px;
+  line-height: 34px;
+  color: #b1b1b1;
+}
+.app-items-pagination a:hover, .app-items-pagination a.active {
+  border-color: #ff503f;
+  background-color: #ff503f;
+  color: white;
+}
+
+.app-item-info {
+  padding: 30px 0;
+}
+.app-item-info p {
+  padding: 30px 30px;
+  border-bottom: 1px #e2e2e2 solid;
+}
+.app-item-info p:first-child {
+  padding-top: 0;
+}
+.app-item-info p:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.app-item-info p span {
+  display: inline-block;
+  min-width: 140px;
+  color: #7e7e7e;
+}
+.app-item-info p i {
+  width: calc(100% - 140px);
+  float: right;
+  line-height: 26px;
+}
+.app-item-info .btn {
+  margin-top: 30px;
+  margin-right: 30px;
+  float: right;
+}
+
+.app-actions {
+  padding: 30px;
+  border-bottom: 1px #e2e2e2 solid;
+  position: relative;
+}
+.app-actions .add {
+  float: right;
+}
+
+.app-search {
+  width: 40%;
+  float: left;
+}
+.app-search input[type='text'] {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background: none;
+  font-family: "Droid Sans", sans-serif;
+  font-size: 18px;
+  color: #bebebe;
+}
+.app-search ::-webkit-input-placeholder {
+  color: #bebebe;
+}
+.app-search :-moz-placeholder {
+  color: #bebebe;
+}
+.app-search ::-moz-placeholder {
+  color: #bebebe;
+}
+.app-search :-ms-input-placeholder {
+  color: #bebebe;
+}
+
+.app-sort {
+  border: 1px #e2e2e2 solid;
+  border-radius: 20px;
+  background: white url(../images/sort_arrow.png) 90% 16px no-repeat;
+  position: absolute;
+  top: 30px;
+  right: 75px;
+  cursor: pointer;
+}
+.app-sort li {
+  display: none;
+  width: 160px;
+  height: 35px;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 36px;
+  color: #8b8b8b;
+}
+.app-sort li:first-child {
+  display: block;
+}
+.app-sort li:hover {
+  color: #ff503f;
+}
+.app-sort:hover li {
+  display: block;
+}
+
+.app-content-sidebar h3 {
+  padding: 30px;
+  border-bottom: 1px #e2e2e2 solid;
+  font-size: 16px;
+}
+.app-content-sidebar h3 .fa {
+  margin-right: 10px;
+}
+
+.app-latest-rents li {
+  padding: 20px 30px;
+  border-bottom: 1px #e2e2e2 solid;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+}
+.app-latest-rents li:last-child {
+  border-bottom: none;
+}
+.app-latest-rents li:hover {
+  background-color: #fbfbfb;
+}
+.app-latest-rents .movie {
+  font-style: italic;
+  color: #989898;
+}
+.app-latest-rents .date {
+  display: block;
+  font-size: 12px;
+  color: #bebebe;
+}
+
+/*--------------------------*/
+/*       COPYRIGHT 2015     */
+/*       www.eduweb.pl      */
+/*--------------------------*/
