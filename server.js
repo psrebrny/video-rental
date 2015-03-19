@@ -8,10 +8,10 @@ var express = require("express"),
     dburl = "mongodb://localhost:27017/VideoRental";
 
 app.use(express.static(__dirname + "/"));
-//app.use(express.static(__dirname + "/bower_components"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req,res){
-   res.sendfile("index.html");
+   res.sendfile("public/index.html");
 });
 
 app.get("/movies", function(req,res){
