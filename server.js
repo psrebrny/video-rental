@@ -58,6 +58,49 @@ app.get("/actors", function(req,res){
     })
 });
 
+app.get("/categories", function(req,res){
+
+    var limit = req.query.limit;
+
+    MongoClient.connect(dburl, function(err, db){
+        if(err){
+            res.status(500);
+            res.send({error:true});
+            return;
+        }
+
+        db.collection("categories").find({},{limit: limit}).toArray(function(err, docs) {
+            if (err) {
+                res.status(500);
+                res.send({error: true});
+                return;
+            }
+            res.json(docs)
+        });
+    })
+});
+
+app.get("/clients", function(req,res){
+
+    var limit = req.query.limit;
+
+    MongoClient.connect(dburl, function(err, db){
+        if(err){
+            res.status(500);
+            res.send({error:true});
+            return;
+        }
+
+        db.collection("clients").find({},{limit: limit}).toArray(function(err, docs) {
+            if (err) {
+                res.status(500);
+                res.send({error: true});
+                return;
+            }
+            res.json(docs)
+        });
+    })
+});
 
 app.listen("8000", function(){
     console.log("Server Aktywny");

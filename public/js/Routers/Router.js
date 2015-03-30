@@ -7,7 +7,9 @@
         routes:{
             "": "showMoviesList",
             "index.html": "showMoviesList",
-            "actors": "showActorsList"
+            "actors": "showActorsList",
+            "categories": "showCategoriesList",
+            "clients": "showClientsList"
         },
         showMoviesList: function(){
             var movies = new APP.Collections.MoviesList(),
@@ -30,6 +32,31 @@
             APP.showMAinView(view);
 
             actors.fetch({
+                reset: true,
+                data : {
+                    limit : 5
+                }
+            });
+        },
+
+        showCategoriesList: function(){
+            var categories = new APP.Collections.CategoriesList(),
+                view = new APP.Views.CategoriesList({collection: categories});
+
+            APP.showMAinView(view);
+
+            categories.fetch({
+                reset: true
+            });
+        },
+
+        showClientsList: function(){
+            var clients = new APP.Collections.ClientsList(),
+                view = new APP.Views.ClientsList({collection: clients});
+
+            APP.showMAinView(view);
+
+            clients.fetch({
                 reset: true,
                 data : {
                     limit : 5
