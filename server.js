@@ -36,6 +36,29 @@ app.get("/movies", function(req,res){
     })
 });
 
+app.get("/actors", function(req,res){
+
+    var limit = req.query.limit;
+
+    MongoClient.connect(dburl, function(err, db){
+        if(err){
+            res.status(500);
+            res.send({error:true});
+            return;
+        }
+
+        db.collection("actors").find({},{limit: limit}).toArray(function(err, docs) {
+            if (err) {
+                res.status(500);
+                res.send({error: true});
+                return;
+            }
+            res.json(docs)
+        });
+    })
+});
+
+
 app.listen("8000", function(){
     console.log("Server Aktywny");
 });
