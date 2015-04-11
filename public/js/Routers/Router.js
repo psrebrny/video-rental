@@ -7,6 +7,7 @@
         routes:{
             "": "showMoviesList",
             "index.html": "showMoviesList",
+            "movies": "showMoviesList",
             "actors": "showActorsList",
             "categories": "showCategoriesList",
             "clients": "showClientsList"
@@ -23,6 +24,8 @@
                     limit : 5
                 }
             });
+            APP.Views.Navigation.highlight("movies");
+
         },
 
         showActorsList: function(){
@@ -37,6 +40,9 @@
                     limit : 5
                 }
             });
+
+            APP.Views.Navigation.highlight("actors");
+
         },
 
         showCategoriesList: function(){
@@ -48,6 +54,9 @@
             categories.fetch({
                 reset: true
             });
+
+            APP.Views.Navigation.highlight("categories");
+
         },
 
         showClientsList: function(){
@@ -62,6 +71,9 @@
                     limit : 5
                 }
             });
+
+            APP.Views.Navigation.highlight("clients");
+
         }
     })
 

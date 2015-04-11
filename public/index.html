@@ -22,7 +22,7 @@
         </div>
 
         <div class="app-sidebar-nav">
-            <a href="index.html" class="active">
+            <a href="/movies" class="active" pushstate-link data-tabs="video-tabs">
                 <i class="fa fa-play-circle-o"></i>
                 Baza filmów
             </a>
@@ -31,7 +31,7 @@
                     <i class="fa fa-ellipsis-h"></i>
                 </div>
 
-            <a href="list-rents.html">
+            <a href="/rents" pushstate-link data-tabs="rental-tabs">
                 <i class="fa fa-calendar"></i>
                 Wypożyczalnia
             </a>
@@ -57,26 +57,26 @@
         </div>
 
         <div class="app-main-tabs active" id="video-tabs">
-            <a href="index.html" class="active">
+            <a href="/movies" class="active" pushstate-link>
                 <i class="fa fa-film"></i>
                 Filmy
             </a>
-            <a href="list-actors.html">
+            <a href="/actors" pushstate-link>
                 <i class="fa fa-users"></i>
                 Aktorzy
             </a>
-            <a href="list-categories.html">
+            <a href="/categories" pushstate-link>
                 <i class="fa fa-list-ol"></i>
                 Kategorie
             </a>
         </div>
 
         <div class="app-main-tabs" id="rental-tabs">
-            <a href="list-rents.html">
+            <a href="/rents" pushstate-link>
                 <i class="fa fa-thumbs-o-up"></i>
                 Wypożyczenia
             </a>
-            <a href="list-clients.html">
+            <a href="/clients" pushstate-link>
                 <i class="fa fa-user"></i>
                 Klienci
             </a>
@@ -193,8 +193,11 @@
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/underscore/underscore.js"></script>
 <script src="../bower_components/backbone/backbone.js"></script>
+<script src="js/libs/pushstate-links.js"></script>
 
 <script src="js/Setup.js"></script>
+
+<script src="js/Views/Navigation.js"></script>
 
 <script src="js/Models/MovieModel.js"></script>
 <script src="js/Collections/MoviesListCollection.js"></script>
