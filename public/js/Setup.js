@@ -14,7 +14,7 @@
         ViewsInstances: {}
     };
 
-    APP.showMAinView = function(view){
+    APP.showMainView = function(view){
         if(APP.ViewsInstances.mainView){
             APP.ViewsInstances.mainView.remove();
         }
