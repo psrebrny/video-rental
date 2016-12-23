@@ -6,7 +6,7 @@ web(backbone) and backend npm + MongoDB application
 
 to install
 ----------
-- git clone git@github.com:silver029/video-rental.git
+- git clone git@github.com:psrebrny/video-rental.git
 - npm install
 - bower install
 
